@@ -17,7 +17,6 @@ class App extends Component {
     let url = 'http://netflixroulette.net/api/api.php?director=Quentin%20Tarantino'; //tarantino movies currently on Netflix
     //call our fetch function and supply this url
     this.fetchAPI(url);
-
   }
 
   render() {
@@ -43,8 +42,10 @@ class App extends Component {
   }
 
   fetchAPI(url) {
+    //fetch data, convert to json
     fetch(url).then((resp) => resp.json()).then((data) => {
       console.log(data);
+      //replace state
       this.setState({
         data: data
       })
