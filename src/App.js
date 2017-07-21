@@ -14,7 +14,7 @@ class App extends Component {
   componentDidMount() {
     console.log('Mounted!');
     //set url for the fetch (netflix roulette)
-    let url = 'http://netflixroulette.net/api/api.php?director=Quentin%20Tarantino'; //tarantino movies currently on Netflix
+    let url = 'https://netflixroulette.net/api/api.php?director=Quentin%20Tarantino'; //tarantino movies currently on Netflix
     //call our fetch function and supply this url
     this.fetchAPI(url);
   }
